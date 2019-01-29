@@ -6,6 +6,17 @@ using namespace std;
 #define int long long int
 #define ff first
 #define ss second
+int power(int n,int q){
+    int ans=1;
+    n%=mod;
+    while(q>0){
+        if(q&1)
+        ans=(ans*n)%mod;
+        n=(n*n)%mod;
+        q>>=1;
+    }
+    return ans%mod;
+}
 void fast(){
 	ios_base::sync_with_stdio(false);
     cin.tie(NULL);
