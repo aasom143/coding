@@ -11,13 +11,14 @@ void fast(){
    ios_base::sync_with_stdio(false);
    cin.tie(0); cout.tie(0);
 }
+int ans=0,arr[Max];
 void ini(){
    for(int i=0;i<=Max;i++)
       arr[i]=i;
 }
 int root(int i){
    if(arr[i]==i)return i;
-   return arr[i]=find(a[i]);
+   return arr[i]=root(arr[i]);
 }
 void union1(int x,int y,int val)
 {
