@@ -1,5 +1,5 @@
 // https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=1620&mosmsg=Submission+received+with+ID+23896545
-
+// implementation m bugs hai log(n) wala shi hai :)
 #include <bits/stdc++.h>
 using namespace std; 
 #define pb push_back
