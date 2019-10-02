@@ -1,7 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define mp make_pair
+#define pb push_back
+#define mod 1000000007
+#define int long long int
+#define N 100005
+void fast(){
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+}
+int tree[4*N];
+int a[N];
+
 void build(int node, int start, int end)
 {
     if(start == end){
-        tree[node] = A[start];
+        tree[node] = a[start];
     }
     else{
         int mid = (start + end) / 2;
@@ -14,12 +29,13 @@ void build(int node, int start, int end)
 void update(int node, int start, int end, int idx, int val)
 {
     if(start == end){
+        a[idx] += val;
         tree[node] += val;
     }
     else{
         int mid = (start + end) / 2;
         if(start <= idx and idx <= mid){
-           	update(2*node, start, mid, idx, val);
+            update(2*node, start, mid, idx, val);
         }
         else{
             update(2*node+1, mid+1, end, idx, val);
@@ -41,3 +57,10 @@ int query(int node, int start, int end, int l, int r)
     int p2 = query(2*node+1, mid+1, end, l, r);
     return (p1 + p2);
 }
+
+main()
+{
+    fast();
+}
+
+// 29 september 2019 div2 A
