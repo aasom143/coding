@@ -27,10 +27,12 @@ int lsub(int a,int b){
 	int sum=((a%mod)-(b%mod)+mod)%mod;return sum;
 }
 int lmul(int a,int b){
-	int sum=((a%mod)*(b%mod))%mod;return sum;
+	int sum=((a%mod)*(b%mod))%mod;
+	sum=(sum+mod)%mod;return sum;
 }
 int ldiv(int a,int b){
-	int sum=((a%mod)*(power(b,mod-2)%mod))%mod;return sum;
+	int sum=((a%mod)*(power(b,mod-2)%mod))%mod;
+	sum=(sum+mod)%mod;return sum;
 }
 main()
 {
