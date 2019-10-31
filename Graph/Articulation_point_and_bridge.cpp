@@ -59,7 +59,7 @@ main(){
     	articulationPoint++;
     cout<<articulationPoint<<endl;
     if(c>1)
-    	cout<<"0 ";
+    	cout<<root<<" ";
     for(auto a: ap)
     	cout<<a<<" ";
     cout<<endl;
